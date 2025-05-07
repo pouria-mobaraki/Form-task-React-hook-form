@@ -1,0 +1,289 @@
+body {
+  font-family: "Vazirmatn", sans-serif;
+  background-color: #e5e7eb; /* خاکستری کمی تیره‌تر */
+  direction: rtl;
+  padding: 2rem;
+  margin: 0;
+  color: #333;
+  display: flex;
+  align-items: flex-start; /* یا center اگر بخوای کامل وسط باشه */
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.invoice-form {
+  background-color: white;
+  width: 100%;
+  max-width: 480px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+  top: 30px;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #111827;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border 0.2s ease;
+  background-color: #f9fafb;
+}
+
+.form-group input:focus {
+  border-color: #4f46e5;
+  outline: none;
+  background-color: white;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #4f46e5;
+  color: white;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #4338ca;
+}
+
+button[type="button"] {
+  background-color: #10b981;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+button[type="button"]:hover {
+  background-color: #059669;
+}
+
+.error {
+  margin-top: 0.4rem;
+  color: #e11d48;
+  font-size: 0.85rem;
+}
+
+/* استایل مدال */
+/* استایل‌های مدال */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* پس‌زمینه نیمه شفاف */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px; /* عرض مدال */
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.modal h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #111827;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column; /* ورودی‌ها به صورت عمودی */
+  gap: 1.2rem; /* فاصله بین ورودی‌ها */
+}
+
+.modal-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9fafb;
+}
+
+.modal-input:focus {
+  border-color: #4f46e5;
+  outline: none;
+  background-color: white;
+}
+
+.modal-add-btn {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #10b981;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+.modal-add-btn:hover {
+  background-color: #059669;
+}
+
+.modal-close-btn {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #e5e7eb;
+  color: #111827;
+  transition: background-color 0.2s ease;
+  margin-top: 1rem;
+}
+
+.modal-close-btn:hover {
+  background-color: #d1d5db;
+}
+
+.error-message {
+  margin-top: 0.4rem;
+  color: #e11d48;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* استایل ایتم ها  */
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.item-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.item-card:hover {
+  transform: scale(1.02);
+  background-color: #fefefe;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-name {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.item-qty-price {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.item-desc {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
+  padding-right: 8px;
+}
+
+/* استایل های دکمه های ایتم ها */
+.item-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.item-actions button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.item-actions button:hover {
+  background-color: #0056b3;
+}
+
+.item-actions button:last-child {
+  background-color: #dc3545;
+}
+
+.item-actions button:last-child:hover {
+  background-color: #a71d2a;
+}
+
+
+.invoice-total{
+  margin-top: 2rem;
+  padding: 1rem 1.5rem;
+  background-color: #f9f9f9;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.success-message {
+  color: green;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.invoice-title2 {
+  color: rgb(53, 53, 145);
+}
